@@ -128,6 +128,7 @@ const BlogSection = () => {
                   <Button 
                     variant="outline" 
                     className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                    onClick={() => {/* TODO: Add blog post routing */}}
                   >
                     Read Article
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -173,7 +174,12 @@ const BlogSection = () => {
                         day: 'numeric' 
                       })}
                     </div>
-                    <Button variant="ghost" size="sm" className="text-primary hover:text-primary-glow p-0 h-auto">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="text-primary hover:text-primary-glow p-0 h-auto"
+                      onClick={() => {/* TODO: Add blog post routing */}}
+                    >
                       Read more →
                     </Button>
                   </div>
@@ -189,6 +195,7 @@ const BlogSection = () => {
             variant="outline" 
             size="lg"
             className="border-primary/50 text-primary hover:bg-primary/10 font-semibold px-8"
+            onClick={() => {/* TODO: Add blog page routing */}}
           >
             View All Articles
             <ArrowRight className="ml-2 w-5 h-5" />

@@ -30,10 +30,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Prompt Engineering</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">RAG Implementation</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">PDF Extraction</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">LLM Customization</a></li>
+              <li><button onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">Prompt Engineering</button></li>
+              <li><button onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">RAG Implementation</button></li>
+              <li><button onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">PDF Extraction</button></li>
+              <li><button onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">LLM Customization</button></li>
             </ul>
           </div>
 
@@ -47,14 +47,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <button onClick={() => window.open('mailto:contact@hermes-llm.ai?subject=Consultation Request', '_blank')} className="hover:text-primary transition-colors">
                   Schedule Consultation
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-primary transition-colors">
                   Support
-                </a>
+                </button>
               </li>
             </ul>
           </div>

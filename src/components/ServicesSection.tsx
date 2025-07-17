@@ -46,7 +46,7 @@ const additionalServices = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-hero relative">
+    <section id="services" className="py-20 px-6 bg-gradient-hero relative">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
@@ -82,6 +82,7 @@ const ServicesSection = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                  onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Learn More
                 </Button>

@@ -33,7 +33,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-gradient-hero relative">
+    <section id="contact" className="py-20 px-6 bg-gradient-hero relative">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
@@ -77,6 +77,7 @@ const ContactSection = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-accent/50 text-accent hover:bg-accent/10"
+                  onClick={() => window.open('mailto:contact@hermes-llm.ai?subject=Consultation Request', '_blank')}
                 >
                   Book Meeting
                 </Button>

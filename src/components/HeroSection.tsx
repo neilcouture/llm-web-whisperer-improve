@@ -54,6 +54,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-4 rounded-lg shadow-glow hover:shadow-glow transition-all duration-300"
+              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -62,6 +63,7 @@ const HeroSection = () => {
               variant="outline" 
               size="lg"
               className="border-primary/50 text-primary hover:bg-primary/10 font-semibold px-8 py-4 rounded-lg"
+              onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Our Services
             </Button>
