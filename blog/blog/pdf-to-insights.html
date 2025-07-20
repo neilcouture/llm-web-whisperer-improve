@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We're Obsessed with Making PDFs Actually Useful</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why We're Obsessed with Making PDFs Actually Useful",
+      "image": "https://hermes-llm.ai/images/blog/pdf-to-insights-banner.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Hermes LLM Consulting",
+        "url": "https://hermes-llm.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hermes LLM Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hermes-llm.ai/logo-1.webp"
+        }
+      },
+      "datePublished": "2025-03-13",
+      "dateModified": "2025-03-13",
+      "description": "A deep dive into why PDFs are terrible for data extraction and how we're fixing it with some clever automation.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hermes-llm.ai/blog/pdf-to-insights.html"
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #ffffff;
+            line-height: 1.7;
+        }
+        header, footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000000;
+        }
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #cccccc;
+            font-style: italic;
+        }
+        section {
+            padding: 20px;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #00BFFF;
+            margin-top: 35px;
+            font-size: 1.5em;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .casual {
+            font-style: italic;
+            color: #cccccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Why We're Obsessed with Making PDFs Actually Useful</h1>
+        <p>Hermes LLM Consulting Blog</p>
+    </header>
+
+    <section>
+        <p>Look, I'll be honest with you. PDFs are kind of a nightmare if you're trying to do anything useful with the data inside them. But here's the thing - they're everywhere. Every contract, every financial report, every research paper... it's all locked up in these digital filing cabinets that were never meant to talk to databases or spreadsheets.</p>
+
+        <p>We've been working on this problem for a while now, and I wanted to share what we've learned about turning these document mountains into something actually actionable.</p>
+
+        <h2>The PDF Problem (It's Worse Than You Think)</h2>
+        <p>PDFs were designed in the 90s to look good on paper. That's it. They're basically digital photographs of documents, which is great for printing but terrible for everything else. Here's what we deal with daily:</p>
+        <ul>
+            <li>Documents that look identical but have completely different underlying structures</li>
+            <li>Scanned contracts from 2003 that need OCR just to find the date</li>
+            <li>Tables that somehow got turned into images (why?!)</li>
+            <li>Metadata that's either missing or completely wrong</li>
+        </ul>
+        <p>The worst part? Most extraction tools just give up when they hit the tricky stuff. We've seen too many projects stall because someone thought they could just "run PDFs through a converter" and call it done.</p>
+
+        <h2>What We Actually Built</h2>
+        <p>After dealing with this frustration for years, we built something that actually works. It's not magic - it's just a lot of careful engineering:</p>
+        
+        <p><strong>Smart routing:</strong> The system figures out if it's dealing with a native PDF or a scanned image and handles each type differently. This alone saves us from about 60% of the usual headaches.</p>
+        
+        <p><strong>OCR that doesn't suck:</strong> We use modern computer vision models that can actually handle weird layouts, rotated text, and those tables that somehow got embedded as images.</p>
+        
+        <p><strong>Metadata reconstruction:</strong> When the original metadata is garbage (which it usually is), we extract and rebuild it from the content itself.</p>
+        
+        <p><strong>Context-aware processing:</strong> This is where it gets interesting. We don't just extract text - we understand what we're looking at. Contract terms, financial figures, research findings... the system knows the difference.</p>
+
+        <div class="casual">
+            <p>(Side note: Named entity recognition has come a long way in the last few years. It's actually pretty amazing what you can pull out of unstructured text now.)</p>
+        </div>
+
+        <h2>Security Stuff (Because It Matters)</h2>
+        <p>We work with law firms and financial institutions, so this isn't optional. Everything is encrypted, access is controlled down to the document level, and we're compliant with the usual suspects - GDPR, HIPAA, etc.</p>
+        
+        <p>The funny thing about security is that it's often easier to do it right from the start than to bolt it on later. We learned that lesson the hard way on some earlier projects.</p>
+
+        <h2>The Results (Finally)</h2>
+        <p>Here's what actually happens when you get this right:</p>
+        <ul>
+            <li>Processing that used to take weeks now happens overnight</li>
+            <li>We're hitting 95%+ accuracy on most document types (and we're picky about what counts as "accurate")</li>
+            <li>Teams can finally spend time analyzing instead of copy-pasting data</li>
+        </ul>
+        
+        <p>The best part is watching what happens next. Once people have clean, structured data, they start asking questions they never could before. That's when the real insights happen.</p>
+
+        <p>If you're wrestling with document extraction (and honestly, who isn't these days?), <a href="mailto:info@hermes-llm.ai">drop us a line</a>. We've probably seen your exact problem before.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hermes LLM Consulting | info@hermes-llm.ai</p>
+    </footer>
+</body>
+</html>
