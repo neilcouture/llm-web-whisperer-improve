@@ -20,11 +20,28 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Create email content
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not specified'}
+Service Interest: ${formData.service || 'Not specified'}
+
+Message:
+${formData.message}`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:info@hermes-llm.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
+      title: "Opening Email Client",
+      description: "Your default email application will open with the message pre-filled.",
     });
+    
     setFormData({ name: "", email: "", company: "", service: "", message: "" });
   };
 
@@ -59,7 +76,7 @@ const ContactSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-primary font-medium">contact@hermes-llm.ai</p>
+                <p className="text-primary font-medium">info@hermes-llm.ai</p>
               </CardContent>
             </Card>
 
@@ -77,7 +94,7 @@ const ContactSection = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-accent/50 text-accent hover:bg-accent/10"
-                  onClick={() => window.open('mailto:contact@hermes-llm.ai?subject=Consultation Request', '_blank')}
+                  onClick={() => window.open('mailto:info@hermes-llm.ai?subject=Consultation Request', '_blank')}
                 >
                   Book Meeting
                 </Button>
