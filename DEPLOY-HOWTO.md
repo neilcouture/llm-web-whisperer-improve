@@ -28,10 +28,14 @@ cd llm-web-whisperer-improve
 sudo npm install
 sudo npm run build
 
+* to run locally
+bun run dev
+
 
 sudo rm -rf /var/www/html/*
 
 sudo cp -r dist/* /var/www/html/
+sudo cp -R blog /var/www/html/
 
 sudo chown -R apache:apache /var/www/html
 sudo chmod -R 755 /var/www/html
