@@ -42,12 +42,12 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:contact@hermes-llm.ai" className="hover:text-primary transition-colors">
-                  contact@hermes-llm.ai
+                <a href="mailto:info@hermes-llm.ai" className="hover:text-primary transition-colors">
+                  info@hermes-llm.ai
                 </a>
               </li>
               <li>
-                <button onClick={() => window.open('mailto:contact@hermes-llm.ai?subject=Consultation Request', '_blank')} className="hover:text-primary transition-colors">
+                <button onClick={() => window.open('mailto:info@hermes-llm.ai?subject=Consultation Request', '_blank')} className="hover:text-primary transition-colors">
                   Schedule Consultation
                 </button>
               </li>
