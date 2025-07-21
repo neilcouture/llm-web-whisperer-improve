@@ -1,6 +1,8 @@
 
 ssh -i 
 
+##### INSTRUCTION TO DEPLOY ON LOCALLY
+
 cd /Users/neil/sideProjects/llm-web-whisperer-improve
 
 git clone ssh://ghnc/neilcouture/llm-web-whisperer-improve.git
@@ -21,7 +23,7 @@ bun run dev
 
 
 
-#####
+##### INSTRUCTION TO DEPLOY ON LIVE SERVER
 
 cd llm-web-whisperer-improve
 
