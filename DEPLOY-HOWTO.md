@@ -3,21 +3,21 @@ ssh -i
 
 ##### INSTRUCTION TO DEPLOY ON LOCALLY
 
-cd /Users/neil/sideProjects/llm-web-whisperer-improve
-
 git clone ssh://ghnc/neilcouture/llm-web-whisperer-improve.git
 
+cd /Users/neil/sideProjects/llm-web-whisperer-improve
 
+# assume npm is running on your computer
 npm install
 
+# Install Bun (if not already installed)
 curl -fsSL https://bun.sh/install | bash
+exec /bin/zsh  (OR RESTART SHELL so that bin is in the PATH
 
+cd /Users/neil/sideProjects/llm-web-whisperer-improve
 bun install
 
-exec /bin/zsh
-
-bun install
-
+# start bun server locally
 bun run dev
 
 
