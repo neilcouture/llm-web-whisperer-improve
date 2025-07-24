@@ -58,17 +58,28 @@ sudo emacs /etc/httpd/conf.d/llm-whisperer.conf
 
     ErrorLog /var/log/httpd/llm-whisperer-error.log
     CustomLog /var/log/httpd/llm-whisperer-access.log combined
+
+
 </VirtualHost>
 ``
+
+curl -I http://www.hermes-llm.ai/sitemap.xml
+
+
 
 sudo emacs /var/www/html/.htaccess
 ``
 RewriteEngine On
 RewriteBase /
+
+# Don’t rewrite sitemap.xml
+RewriteRule ^(.*\.xml)$ - [NC,L]
+
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
+
 ``
 
 
