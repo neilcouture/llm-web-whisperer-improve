@@ -38,7 +38,8 @@ sudo rm -rf /var/www/html/*
 
 sudo cp -r dist/* /var/www/html/
 sudo cp -R blog /var/www/html/
-sudo cp icons/favicon.ico /var/www/html/favicon.ico
+sudo cp icons/favicon.ico /var/www/html/favicon.ico\
+sudo cp sitemap.xml /var/www/html/sitemap.xml
 
 sudo chown -R apache:apache /var/www/html
 sudo chmod -R 755 /var/www/html

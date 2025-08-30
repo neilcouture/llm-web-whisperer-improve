@@ -37,9 +37,9 @@ const expertise = [
 ];
 
 const AboutSection = () => {
-  return (
-    <section className="py-20 px-6 bg-background relative">
-      <div className="container mx-auto">
+   return (
+     <section id="about" className="py-20 px-6 bg-background relative">
+       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Content */}

@@ -12,27 +12,33 @@ const blogPosts = [
     date: "2024-01-20",
     author: "Hermes Team",
     featured: true,
-    url: "http://www.hermes-llm.ai/blog/Are-Open-Source-LLMs-the-Future-Pros-Cons-for-Enterprises.html"
+    url: "/blog/Are-Open-Source-LLMs-the-Future-Pros-Cons-for-Enterprises.html",
+    relatedService: "services",
+    relatedServiceTitle: "View Our AI Consulting Services"
   },
   {
     title: "Scaling LLMs Securely: Data Protection Strategies You Need to Know",
     excerpt: "Essential security frameworks and data protection strategies for enterprises deploying large language models at scale while maintaining compliance and privacy.",
     category: "Security",
-    readTime: "8 min read", 
+    readTime: "8 min read",
     date: "2024-01-15",
     author: "Hermes Team",
     featured: true,
-    url: "http://www.hermes-llm.ai/blog/Scaling-llms-securely.html"
+    url: "/blog/Scaling-llms-securely.html",
+    relatedService: "services",
+    relatedServiceTitle: "Explore Security Solutions"
   },
   {
     title: "From PDFs to Insights: Automating Document Extraction",
     excerpt: "Learn how modern AI techniques can transform your document processing workflows and unlock valuable insights from complex business documents with precision accuracy.",
     category: "Document Processing",
     readTime: "6 min read",
-    date: "2024-01-10", 
+    date: "2024-01-10",
     author: "Hermes Team",
     featured: true,
-    url: "http://www.hermes-llm.ai/blog/pdf-to-insights.html"
+    url: "/blog/pdf-to-insights.html",
+    relatedService: "services",
+    relatedServiceTitle: "PDF Extraction Services"
   },
   {
     title: "RAG 101: How Retrieval-Augmented Generation Is Changing AI",
@@ -42,17 +48,21 @@ const blogPosts = [
     date: "2024-01-05",
     author: "Hermes Team",
     featured: false,
-    url: "http://www.hermes-llm.ai/blog/rag-101.html"
+    url: "/blog/rag-101.html",
+    relatedService: "services",
+    relatedServiceTitle: "RAG Implementation Services"
   },
   {
     title: "The Future of Prompt Engineering",
     excerpt: "Insights into emerging trends and advanced techniques that are shaping the future of prompt engineering and LLM optimization strategies.",
-    category: "Prompt Engineering", 
+    category: "Prompt Engineering",
     readTime: "5 min read",
     date: "2023-12-28",
     author: "Hermes Team",
     featured: false,
-    url: "http://www.hermes-llm.ai/blog/future-of-prompt-engineering.html"
+    url: "/blog/future-of-prompt-engineering.html",
+    relatedService: "services",
+    relatedServiceTitle: "Prompt Engineering Services"
   }
 ];
 
@@ -68,9 +78,9 @@ const BlogSection = () => {
   const featuredPosts = blogPosts.filter(post => post.featured);
   const allPosts = blogPosts;
 
-  return (
-    <section className="py-20 px-6 bg-background relative">
-      <div className="container mx-auto">
+   return (
+     <section id="blog" className="py-20 px-6 bg-background relative">
+       <div className="container mx-auto">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-4">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -108,27 +118,38 @@ const BlogSection = () => {
                     {post.excerpt}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-0 mt-auto">
-                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'short', 
-                        day: 'numeric' 
-                      })}
-                    </div>
-                    <span>{post.author}</span>
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary/50 text-primary hover:bg-primary/10"
-                    onClick={() => window.open(post.url, '_blank')}
-                  >
-                    Read Article
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </CardContent>
+                 <CardContent className="pt-0 mt-auto">
+                   <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
+                     <div className="flex items-center gap-1">
+                       <Calendar className="w-4 h-4" />
+                       {new Date(post.date).toLocaleDateString('en-US', {
+                         year: 'numeric',
+                         month: 'short',
+                         day: 'numeric'
+                       })}
+                     </div>
+                     <span>{post.author}</span>
+                   </div>
+
+                   {/* Related Service Link */}
+                   <div className="mb-3 p-2 bg-primary/5 rounded border border-primary/10">
+                     <button
+                       onClick={() => document.querySelector(`#${post.relatedService}`)?.scrollIntoView({ behavior: 'smooth' })}
+                       className="text-xs text-primary hover:text-primary-glow underline transition-colors"
+                     >
+                       🔗 {post.relatedServiceTitle}
+                     </button>
+                   </div>
+
+                   <Button
+                     variant="outline"
+                     className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                     onClick={() => window.open(post.url, '_blank')}
+                   >
+                     Read Article
+                     <ArrowRight className="ml-2 w-4 h-4" />
+                   </Button>
+                 </CardContent>
               </Card>
             ))}
           </div>
@@ -190,7 +211,7 @@ const BlogSection = () => {
             variant="outline" 
             size="lg"
             className="border-primary/50 text-primary hover:bg-primary/10 font-semibold px-8"
-            onClick={() => window.open('http://www.hermes-llm.ai/blog/index.html', '_blank')}
+             onClick={() => window.open('/blog/index.html', '_blank')}
           >
             View All Articles
             <ArrowRight className="ml-2 w-5 h-5" />

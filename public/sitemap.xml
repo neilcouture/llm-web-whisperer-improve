@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://hermes-llm.ai/</loc>
-  </url>
-  <url>
-    <loc>https://hermes-llm.ai/blog/Scaling-llms-securely.html</loc>
-  </url>
-  <url>
-    <loc>https://hermes-llm.ai/blog/Are-Open-Source-LLMs-the-Future-Pros-Cons-for-Enterprises.html</loc>
-  </url>
-  <url>
-    <loc>https://hermes-llm.ai/blog/future-of-prompt-engineering.html</loc>
-  </url>
-  <url>
-    <loc>https://hermes-llm.ai/blog/pdf-to-insights.html</loc>
-  </url>
-  <url>
-    <loc>https://hermes-llm.ai/blog/rag-101.html</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+   <!-- Homepage - Highest Priority -->
+   <url>
+     <loc>https://hermes-llm.ai/</loc>
+     <lastmod>2024-01-25</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>1.0</priority>
+   </url>
+
+   <!-- Blog Posts - High Priority -->
+   <url>
+     <loc>https://hermes-llm.ai/blog/Scaling-llms-securely.html</loc>
+     <lastmod>2024-01-15</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.9</priority>
+   </url>
+   <url>
+     <loc>https://hermes-llm.ai/blog/Are-Open-Source-LLMs-the-Future-Pros-Cons-for-Enterprises.html</loc>
+     <lastmod>2024-01-20</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.9</priority>
+   </url>
+   <url>
+     <loc>https://hermes-llm.ai/blog/future-of-prompt-engineering.html</loc>
+     <lastmod>2023-12-28</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://hermes-llm.ai/blog/pdf-to-insights.html</loc>
+     <lastmod>2024-01-10</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://hermes-llm.ai/blog/rag-101.html</loc>
+     <lastmod>2024-01-05</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+
+   <!-- Service Pages (Virtual) -->
+   <url>
+     <loc>https://hermes-llm.ai/#services</loc>
+     <lastmod>2024-01-25</lastmod>
+     <changefreq>weekly</changefreq>
+     <priority>0.9</priority>
+   </url>
+   <url>
+     <loc>https://hermes-llm.ai/#about</loc>
+     <lastmod>2024-01-25</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.7</priority>
+   </url>
+   <url>
+     <loc>https://hermes-llm.ai/#contact</loc>
+     <lastmod>2024-01-25</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
 </urlset>

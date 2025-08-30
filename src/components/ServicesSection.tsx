@@ -8,21 +8,27 @@ const services = [
     title: "Prompt Engineering",
     description: "Optimize AI model performance with expert prompt design and fine-tuning strategies.",
     features: ["Custom prompt architectures", "Performance optimization", "A/B testing frameworks", "Response quality metrics"],
-    color: "text-primary"
+    color: "text-primary",
+    relatedBlog: "future-of-prompt-engineering.html",
+    relatedBlogTitle: "The Future of Prompt Engineering"
   },
   {
     icon: Database,
     title: "RAG Implementation",
     description: "Advanced real-time data retrieval capabilities that enhance your AI systems with current information.",
     features: ["Vector database setup", "Semantic search optimization", "Real-time data integration", "Scalable architectures"],
-    color: "text-accent"
+    color: "text-accent",
+    relatedBlog: "rag-101.html",
+    relatedBlogTitle: "RAG 101: How Retrieval-Augmented Generation Is Changing AI"
   },
   {
     icon: FileText,
     title: "PDF Extraction",
     description: "Automated document processing with precision accuracy for contracts, invoices, and research papers.",
     features: ["Multi-format support", "OCR integration", "Structured data output", "Batch processing"],
-    color: "text-matrix-green"
+    color: "text-matrix-green",
+    relatedBlog: "pdf-to-insights.html",
+    relatedBlogTitle: "From PDFs to Insights: Automating Document Extraction"
   }
 ];
 
@@ -45,8 +51,41 @@ const additionalServices = [
 ];
 
 const ServicesSection = () => {
+  // Structured data for services
+  const servicesStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Consulting Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Hermes LLM Consulting",
+      "url": "https://hermes-llm.ai"
+    },
+    "serviceType": "Technology Consulting",
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Consulting Services",
+      "itemListElement": services.map((service, index) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description
+        },
+        "position": index + 1
+      }))
+    }
+  };
+
   return (
     <section id="services" className="py-20 px-6 bg-gradient-hero relative">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesStructuredData) }}
+      />
+
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 glow-text">
@@ -70,23 +109,46 @@ const ServicesSection = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  variant="outline" 
-                  className="w-full border-primary/50 text-primary hover:bg-primary/10"
-                  onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Learn More
-                </Button>
-              </CardContent>
+               <CardContent>
+                 <ul className="space-y-2 mb-4">
+                   {service.features.map((feature, idx) => (
+                     <li key={idx} className="flex items-center gap-2 text-sm">
+                       <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                       <span className="text-muted-foreground">{feature}</span>
+                     </li>
+                   ))}
+                 </ul>
+
+                 {/* Related Content Links */}
+                 <div className="mb-4 p-3 bg-muted/50 rounded-lg">
+                   <p className="text-xs text-muted-foreground mb-2">📖 Related Article:</p>
+                   <button
+                      onClick={() => window.open(`/blog/${service.relatedBlog}`, '_blank')}
+                     className="text-sm text-primary hover:text-primary-glow underline transition-colors"
+                   >
+                     {service.relatedBlogTitle}
+                   </button>
+                 </div>
+
+                 <div className="flex gap-2">
+                   <Button
+                     variant="outline"
+                     size="sm"
+                     className="flex-1 border-primary/50 text-primary hover:bg-primary/10"
+                     onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                   >
+                     Get Started
+                   </Button>
+                   <Button
+                     variant="ghost"
+                     size="sm"
+                     className="flex-1 text-accent hover:text-accent-glow hover:bg-accent/10"
+                     onClick={() => document.querySelector('#blog')?.scrollIntoView({ behavior: 'smooth' })}
+                   >
+                     Learn More
+                   </Button>
+                 </div>
+               </CardContent>
             </Card>
           ))}
         </div>

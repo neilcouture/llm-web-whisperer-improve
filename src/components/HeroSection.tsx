@@ -11,14 +11,21 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Logo */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-24 h-24 rounded-full bg-gradient-card border border-primary/20 flex items-center justify-center shadow-glow">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                <Code className="w-8 h-8 text-primary" />
-              </div>
-            </div>
-          </div>
+           {/* Logo */}
+           <div className="mb-8 flex justify-center">
+             <div
+               className="w-24 h-24 rounded-full bg-gradient-card border border-primary/20 flex items-center justify-center shadow-glow"
+               role="img"
+               aria-label="Hermes LLM Consulting Logo - AI and Machine Learning Experts"
+             >
+               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                 <Code
+                   className="w-8 h-8 text-primary"
+                   aria-hidden="true"
+                 />
+               </div>
+             </div>
+           </div>
 
           {/* Company name */}
           <h1 className="text-5xl md:text-7xl font-bold mb-4 glow-text">
