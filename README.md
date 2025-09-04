@@ -1,22 +1,16 @@
-# Welcome to your Lovable project
+# Hermes LLM Consulting Website
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/c46663f7-a79e-49fc-b5c6-a43a2fb4e6e6
+**URL**: https://hermes-llm.ai
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c46663f7-a79e-49fc-b5c6-a43a2fb4e6e6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Clone this repo and push changes to make updates to the website.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +56,16 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/c46663f7-a79e-49fc-b5c6-a43a2fb4e6e6) and click on Share -> Publish.
+Build the project and deploy to your preferred hosting platform:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+```
 
-Yes, you can!
+The built files will be in the `dist/` directory.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project can be deployed to any static hosting service such as Vercel, Netlify, or GitHub Pages.
+
+The built files in the `dist/` directory can be uploaded to your hosting provider.

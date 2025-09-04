@@ -1,56 +1,42 @@
 # Agent Guidelines for LLM Web Whisperer
 
 ## Build & Development Commands
-- **Development server**: `vite dev` or `npm run dev`
-- **Build production**: `vite build` or `npm run build`
-- **Build development**: `vite build --mode development` or `npm run build:dev`
-- **Lint code**: `eslint .` or `npm run lint`
-- **Preview build**: `vite preview` or `npm run preview`
+- **Dev server**: `vite dev` or `npm run dev`
+- **Build prod**: `vite build` or `npm run build`
+- **Build dev**: `vite build --mode development` or `npm run build:dev`
+- **Lint**: `eslint .` or `npm run lint`
+- **Preview**: `vite preview` or `npm run preview`
 - **Package manager**: Use `bun` (bun.lock present)
+- **No test commands** - project has no testing setup
 
 ## Code Style Guidelines
 
 ### Imports & Exports
-- Use named imports: `import { Button } from "@/components/ui/button"`
-- Use path aliases: `@/` for `src/` directory
-- Default exports for React components
-- Named exports for utilities and hooks
+- Named imports: `import { Button } from "@/components/ui/button"`
+- Path aliases: `@/` for `src/` directory
+- Default exports for React components, named for utilities/hooks
 
 ### React Components
-- Use arrow functions: `const Component = () => {}`
-- Use TypeScript with relaxed settings (strict: false)
-- Leverage shadcn/ui component library
-- Use `cn()` utility from `@/lib/utils` for conditional Tailwind classes
+- Arrow functions: `const Component = () => {}`
+- TypeScript with relaxed settings (strict: false, noImplicitAny: false)
+- Use shadcn/ui components and `cn()` utility for Tailwind classes
 
 ### Styling
-- Primary: Tailwind CSS with custom design system
-- Use CSS variables for theming (defined in tailwind.config.ts)
+- Tailwind CSS with custom design system
 - Custom gradients: `bg-gradient-primary`, `bg-gradient-hero`
 - Custom shadows: `shadow-glow`, `shadow-card`, `shadow-elegant`
 - Matrix theme colors: `text-matrix-green`, `text-matrix-green-dim`
 
 ### TypeScript
-- Target: ES2020 with JSX transform
-- Relaxed type checking (noImplicitAny: false, strictNullChecks: false)
+- Target: ES2020, JSX transform: react-jsx
+- Relaxed checking: noImplicitAny: false, strictNullChecks: false
 - Path mapping: `"@/*": ["./src/*"]`
 
-### Linting
-- ESLint with TypeScript and React rules
-- React hooks linting enabled
-- React refresh plugin for hot reload optimization
-- Ignores `dist/` directory
-
 ### File Structure
-- Components in `src/components/` (custom) and `src/components/ui/` (shadcn)
-- Pages in `src/pages/`
-- Hooks in `src/hooks/`
-- Utilities in `src/lib/`
-- Assets in `src/assets/` or `public/`
+- Components: `src/components/` (custom), `src/components/ui/` (shadcn)
+- Pages: `src/pages/`, Hooks: `src/hooks/`, Utils: `src/lib/`
+- Assets: `src/assets/` or `public/`
 
 ### Dependencies
-- React 18 with TypeScript
-- React Router for routing
-- TanStack Query for data fetching
-- Radix UI primitives via shadcn/ui
-- Lucide React for icons
-- Tailwind CSS for styling
+- React 18 + TypeScript, React Router, TanStack Query
+- Radix UI via shadcn/ui, Lucide React icons, Tailwind CSS
