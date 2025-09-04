@@ -5,6 +5,18 @@ import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 
 const blogPosts = [
   {
+    title: "The Evolution of Large Language Models: From GPT to Specialized LLMs",
+    excerpt: "Explore how LLMs evolved from general-purpose GPT models to specialized, secure solutions that power Mixture of Agents architectures on private hardware.",
+    category: "AI Evolution",
+    readTime: "14 min read",
+    date: "2025-09-03",
+    author: "Hermes Team",
+    featured: true,
+    url: "/blog/The-Evolution-of-LLMs-From-GPT-to-Specialized.html",
+    relatedService: "services",
+    relatedServiceTitle: "Explore AI Evolution Services"
+  },
+  {
     title: "Are Open-Source LLMs the Future? Pros and Cons for Enterprises",
     excerpt: "Exploring the advantages and challenges of implementing open-source language models in enterprise environments, including cost considerations, customization benefits, and security implications.",
     category: "Industry Analysis",
@@ -67,6 +79,7 @@ const blogPosts = [
 ];
 
 const categoryColors: Record<string, string> = {
+  "AI Evolution": "bg-purple-500/10 text-purple-400 border-purple-500/20",
   "RAG Implementation": "bg-primary/10 text-primary border-primary/20",
   "Prompt Engineering": "bg-accent/10 text-accent border-accent/20",
   "Document Processing": "bg-matrix-green/10 text-matrix-green border-matrix-green/20",
